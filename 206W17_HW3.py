@@ -4,7 +4,7 @@ import re
 ## SI 206 - W17 - HW3
 ## COMMENT WITH:
 ## Your section day/time: Thursday 3-4pm
-## Any names of people you worked with on this assignment:
+## Any names of people you worked with on this assignment: Mariel Setton
 
 #####################
 
@@ -59,11 +59,16 @@ for line in file3:
     python_course_paths = python_course_paths + len(l)
 
 ## (d) Write Python code to determine how many of these paths describe a Microsoft file (a file that EITHER ends with .docx OR .xlsx, but nothing else counts) where the file name ends in a digit. Save that total in the variable microsoft_files_num.
-
-
-
-
-
+file4 = open('computer_paths.txt')
+x = 0
+y = 0
+for line in file4:
+    q = re.findall('.+\d\.docx', line)
+    x = x + len(q)
+    t = re.findall('.+\d\.xlsx', line)
+    y = y + len(t)
+microsoft_files_num = (x+y)
+print(microsoft_files_num)
 
 ## We have provided unit tests in this file. To earn the full 500 points, you'll need to pass all of the tests and will need to have followed the instructions.
 ## Each class of the tests represents one "part" of the homework, and the points for each part are divided approx. equally between each of the tests.
