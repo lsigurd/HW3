@@ -3,7 +3,7 @@ import re
 
 ## SI 206 - W17 - HW3
 ## COMMENT WITH:
-## Your section day/time:
+## Your section day/time: Thursday 3-4pm
 ## Any names of people you worked with on this assignment:
 
 #####################
@@ -19,10 +19,12 @@ import re
 # parse_counted_words('101 dalmations!') should return ('101', 'dalmations') ...
 
 ## Write code to define your parse_counted_words function here.
-
-
-
-
+def parse_counted_words(s):
+    m=re.findall('\d+\s.[A-z]+',s)
+    if len(m)==0:
+        return None
+    else:
+        return tuple(m[-1].split())
 ## PART 2: 200 points
 
 ## We have provided a text file computer_paths.txt. It's not incredibly long -- you can scan through it, but do NOT hard code your answers! Each line contains 1 filesystem path.
