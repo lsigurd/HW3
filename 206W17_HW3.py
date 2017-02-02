@@ -48,7 +48,6 @@ for line in file2:
     n = re.findall('^~/.+', line)
     y = y + len(n)
 full_paths_num =(x+y)
-print(full_paths_num)
 
 ## (c) Write Python code to determine how many of these paths describe a Python file saved inside a folder called SI206. Save that number in the variable python_course_paths.
 
@@ -68,7 +67,6 @@ for line in file4:
     t = re.findall('.+\d\.xlsx', line)
     y = y + len(t)
 microsoft_files_num = (x+y)
-print(microsoft_files_num)
 
 ## We have provided unit tests in this file. To earn the full 500 points, you'll need to pass all of the tests and will need to have followed the instructions.
 ## Each class of the tests represents one "part" of the homework, and the points for each part are divided approx. equally between each of the tests.
